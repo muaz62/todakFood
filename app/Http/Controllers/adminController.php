@@ -36,8 +36,6 @@ class adminController extends Controller
 
         }
         
-
-
         return '';
     }
 
@@ -83,7 +81,7 @@ class adminController extends Controller
 
     public function cancel()
     {
-        return redirect(url('/index')); 
+        return redirect(url('/index'))->with('errors','order failed'); 
     }
     
 
