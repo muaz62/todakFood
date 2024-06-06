@@ -18,7 +18,7 @@ use App\Http\Controllers\customerController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(url('/login'));
 });
 
 Auth::routes();
