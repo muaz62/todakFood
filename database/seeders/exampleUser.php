@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class exampleUser extends Seeder
 {
@@ -40,16 +42,9 @@ class exampleUser extends Seeder
             $customerUser->assignRole('customer');
     
             //make vendor  / restaurant manager
-            // $vendor = Role::create([
-            //     'name' => 'vendor'
-            // ]);
+            $vendor = Role::create([
+                'name' => 'vendor'
+            ]);
     
-            // $vendorUser =   User::create([
-            //     'name' => 'vendor',
-            //     'email' => 'vendor@example.com',
-            //     'password' => Hash::make('vendor')
-            // ]);
-    
-            // $vendorUser->assignRole('vendor');
     }
 }
